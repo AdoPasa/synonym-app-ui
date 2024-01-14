@@ -1,4 +1,4 @@
 {
-  "apiBaseUrl": "https://localhost:7280/api",
+  "apiBaseUrl": "http://185.218.126.206:9996/api",
   "uiBaseUrl": "http://localhost:4200"
 }
