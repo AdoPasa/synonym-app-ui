@@ -1,0 +1,66 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$synonyms-app-web-primary: mat.define-palette(mat.$indigo-palette);
+$synonyms-app-web-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$synonyms-app-web-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$synonyms-app-web-theme: mat.define-light-theme((
+  color: (
+    primary: $synonyms-app-web-primary,
+    accent: $synonyms-app-web-accent,
+    warn: $synonyms-app-web-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($synonyms-app-web-theme);
+
+// Toastr styles
+@import 'ngx-toastr/toastr';
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-wrapper {
+  max-width: 980px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.mdc-text-field {
+  background-color: #FFF;
+  border-radius: 5px !important;
+}
+
+p {
+  margin: 0;
+}
+
+mat-form-field.text-field-invalid {
+  mat-label {
+      color: #f44336;
+  }
+
+  .mdc-notched-outline { 
+    .mdc-notched-outline__trailing, .mdc-notched-outline__notch, .mdc-notched-outline__leading {
+      border-color: #f44336;
+    }
+  }
+}
+
+.box-container {
+  border: 2px solid #748CAB;
+  border-radius: 5px;
+  padding: 20px;
+}

@@ -1,0 +1,49 @@
+{
+    "page-title": "Synonyms app",
+    "en_GB": "English",
+    "bs_Latn_BA": "Bosnian",
+
+    "add": "Add",
+    "cancel": "Cancel",
+    "search": "Search...",
+    "name": "Name",
+    "description": "Description",
+    "here": "here",
+
+    "landing-page": {
+        "welcome": "Welcome",
+        "welcome-text-p1": "Welcome to the synonym app.",
+        "welcome-text-p2": "In order to find a synonym please use the searchbox above.",
+        "welcome-text-p3": "If you can't find the searched word you can add it"
+    },
+
+    "synonym": {
+        "parent-word": "Parent word",
+        "add":"Add new synonym",
+        "unable-to-add": "An error ocurred while adding the synonym, try it later or contact the support for more information",
+        "results-not-found": "Searched synonym not found, please search again",
+        "you-can-add": "You can add this word"
+    },
+
+    "error": {
+        "only-english-exists":"Currently only english language exists",
+
+        "validation": {
+            "field-is-required": "Field is required",
+            "field-length-invalid": "Field can't have more than {0} characters"
+        },
+
+        "synonym": {
+            "already-added": "Synonym already added",
+            "invalid-parent": "Selected parent doesn't exists",
+            "not-found": "Searched synonym not found",
+
+            "validation": {
+                "name-required": "Name is required",
+                "name-invalid-length": "Name can't contain more that 90 characters",
+                "description-required": "Description is required",
+                "description-invalid-length": "Name can't contain more that 300 characters"
+            }
+        }
+    }
+}

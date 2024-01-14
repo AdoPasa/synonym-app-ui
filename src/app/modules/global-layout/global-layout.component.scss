@@ -1,0 +1,27 @@
+header {
+    background: #748CAB;
+    padding: 20px 0;
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                font-size: 20px;
+                text-decoration: none;
+                color: #FFF;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 20px;
+}

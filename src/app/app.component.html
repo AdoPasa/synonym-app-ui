@@ -1,0 +1,6 @@
+<div class="loading-indicator-wrapper" *ngIf="spinnerService.visibility | async">
+  <mat-spinner [diameter]="80">
+  </mat-spinner>
+</div>
+
+<router-outlet></router-outlet>

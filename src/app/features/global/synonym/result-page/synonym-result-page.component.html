@@ -1,0 +1,16 @@
+<div class="box-container" *ngIf="synonymResponse">
+  <h2>{{ synonymResponse.name }}</h2>
+  <hr />
+  <p>{{ synonymResponse.description }}</p>
+
+  <div class="synonyms-containers">
+    <span *ngFor="let relatedSynonym of synonymResponse.relatedSynonyms" [routerLink]="['/synonym', relatedSynonym.name]" >{{ relatedSynonym.name }}</span>
+    <span (click)="addSynonym(synonymResponse.id)"><b>+</b> {{ 'synonym.add' | translate }}</span>
+  </div>
+</div>
+
+<div class="box-container" *ngIf="!synonymResponse">
+  <h2>{{ 'synonym.results-not-found' | translate }}</h2>
+  <hr />
+  <p>{{ "synonym.you-can-add" | translate}} <a (click)="addSynonym()">{{ "here" | translate}}</a></p>      
+</div>

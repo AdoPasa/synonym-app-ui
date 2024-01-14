@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>
+  {{ 'synonym.add' | translate }}
+</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="componentForm">
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'name' | translate }}</mat-label>
+      <input matInput formControlName="name" maxlength="50" />
+      <mat-error *ngIf="componentForm.get('name')?.hasError('required')">
+        {{ "error.validation.field-is-required" | translate }}
+      </mat-error>
+      <mat-error *ngIf="componentForm.get('name')?.hasError('maxLength')">
+        {{ "error.validation.field-length-invalid" | translate:50 }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'description' | translate }}</mat-label>
+      <textarea matInput formControlName="description" maxlength="300" rows="4"></textarea>
+      <mat-error *ngIf="componentForm.get('description')?.hasError('required')">
+        {{ "error.validation.field-is-required" | translate }}
+      </mat-error>
+      <mat-error *ngIf="componentForm.get('description')?.hasError('maxLength')">
+        {{ "error.validation.field-length-invalid" | translate:300 }}
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field *ngIf="!parentIdPreloaded" appearance="outline">
+      <mat-label>{{ 'synonym.parent-word' | translate }}</mat-label>
+      <input 
+        type="text" 
+        matInput 
+        [matAutocomplete]="searchParentAutocomplete" 
+        (ngModelChange)="onKeywordChange()" 
+        (change)="onInputChanged()"
+        [(ngModel)]="searchKeyword"
+        [ngModelOptions]="{standalone: true}">
+      <mat-autocomplete #searchParentAutocomplete [displayWith]="displayFn" (optionSelected)="onParentSelected()">
+        <mat-option *ngFor="let item of foundItems | async" [value]="item">{{ item.name }}</mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-flat-button mat-dialog-close>{{ "cancel" | translate }}</button>
+  <button mat-flat-button color="primary" (click)="submitSynonym()">{{ "add" | translate }}</button>
+</mat-dialog-actions>

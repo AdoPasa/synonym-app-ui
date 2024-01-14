@@ -1,0 +1,19 @@
+<mat-form-field class="example-form-field" appearance="outline">
+  <input 
+      placeholder="{{ 'search' | translate }}"
+      matInput 
+      type="text" 
+      [(ngModel)]="searchKeyword"
+      [matAutocomplete]="searchAutocomplete" 
+      (ngModelChange)="onInputChange()"
+      (keyup)="onInputKeyUp($event)"
+  />
+
+  <mat-autocomplete #searchAutocomplete (optionSelected)="redirectToSynonym()" >
+    <mat-option *ngFor="let item of foundItems | async" [value]="item.name">{{ item.name }}</mat-option>
+  </mat-autocomplete>
+
+  <button matSuffix mat-icon-button aria-label="Clear" (click)="redirectToSynonym()">
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>

@@ -1,0 +1,4 @@
+{
+  "apiBaseUrl": "https://localhost:7280/api",
+  "uiBaseUrl": "http://localhost:4200"
+}

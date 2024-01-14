@@ -1,0 +1,14 @@
+<header>
+    <div class="content-wrapper">
+        <div class="menu">
+            <a href="/">{{ "page-title" | translate }}</a>
+            <app-language-picker></app-language-picker>
+        </div>
+
+        <app-synonym-search></app-synonym-search>
+    </div>
+</header>
+
+<main class="content-wrapper">
+    <router-outlet></router-outlet>
+</main>
