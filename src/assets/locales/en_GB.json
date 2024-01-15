@@ -12,9 +12,9 @@
 
     "landing-page": {
         "welcome": "Welcome",
-        "welcome-text-p1": "Welcome to the synonym app.",
+        "welcome-text-p1": "Welcome to the Synonym app.",
         "welcome-text-p2": "In order to find a synonym please use the searchbox above.",
-        "welcome-text-p3": "If you can't find the searched word you can add it"
+        "welcome-text-p3": "If you can't find the searched word, you can add it"
     },
 
     "synonym": {
