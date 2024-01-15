@@ -1,4 +1,4 @@
 {
-  "apiBaseUrl": "http://185.218.126.206:9996/api",
-  "uiBaseUrl": "http://localhost:4200"
+  "apiBaseUrl": "https://185.218.126.206:9997/api",
+  "uiBaseUrl": "https://polite-mooncake-479ce3.netlify.app"
 }
