@@ -35,7 +35,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/webClient.config.json"
+              "src/webClient.config.json",
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.scss"
