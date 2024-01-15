@@ -5,7 +5,7 @@
   <form [formGroup]="componentForm">
     <mat-form-field appearance="outline">
       <mat-label>{{ 'name' | translate }}</mat-label>
-      <input matInput formControlName="name" maxlength="50" />
+      <input matInput formControlName="name" maxlength="90" />
       <mat-error *ngIf="componentForm.get('name')?.hasError('required')">
         {{ "error.validation.field-is-required" | translate }}
       </mat-error>
